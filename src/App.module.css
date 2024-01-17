@@ -1,0 +1,211 @@
+.mainContainer {
+    height: 200vh;
+    width: 100%;
+    position: relative;
+}
+
+.header {
+    height: var(--header-height);
+    width: 100%;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    height: 54px;
+    width: 100%;
+    background-color: var(--black-color);
+    background-position: right;
+    padding-right: 24px;
+}
+
+.giftImg {
+    height: 54px;
+    width: 128px;
+    background: url('assets/giftMobile.png'), var(--black-color) -24.259px -54.778px / 259.163% 496.914% no-repeat;
+    flex-shrink: 0;
+}
+
+.dot {
+    border-radius: 100%;
+    width: 3px;
+    height: 3px;
+    background-color: var(--gray-color);
+    display: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.textWrapper {
+    padding: 12px 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.firstBlock, .secondBlock {
+    display: flex;
+}
+
+.text {
+    font-family: Graphik LC, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.048px;
+}
+
+.whiteText {
+    composes: text;
+    color: #fff;
+}
+
+.boldText {
+    font-weight: 600;
+}
+
+.orangeText {
+    composes: text;
+    color: var(--orange-color);
+}
+
+.stickyText {
+    letter-spacing: -0.64px;
+}
+
+.codeText {
+    display: none;
+}
+
+.desktopText {
+    composes: whiteText;
+    display: none;
+}
+
+.coma {
+    composes: whiteText;
+    display: inline;
+    margin-right: 4px;
+}
+
+.arrowButton {
+    margin-left: 18px;
+    height: 30px;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.arrowButton p {
+    display: none;
+    text-shadow: 0 0 30px rgba(102, 204, 255, 0.20);
+    background: -webkit-linear-gradient(45deg, var(--gray-color), var(--black-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Graphik LC, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+}
+
+.closeButton {
+    margin-left: 14px;
+    height: 24px;
+    width: 24px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    display: none;
+}
+
+.resetButton {
+    margin-top: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--orange-color);
+    color: var(--black-color);
+    border-radius: 100px;
+    padding: 8px;
+}
+
+@media screen and (min-width: 744px) {
+    .giftImg {
+        width: 185px;
+        background: url('assets/giftTablet.png'), var(--black-color) -28.226px -69px / 259.163% 583.333% no-repeat;
+    }
+
+    .textWrapper {
+        padding: 8px 24px 8px 0;
+        max-width: 360px;
+        justify-content: space-between;
+    }
+
+    .arrowButton {
+        width: 105px;
+        height: 38px;
+        padding: 10px 14px;
+        background-color: #fff;
+        border-radius: 100px;
+    }
+
+    .arrowButton p {
+        display: inline;
+        text-shadow: 0 0 30px rgba(102, 204, 255, 0.20);
+    }
+
+    .arrowButton svg {
+        display: none;
+    }
+
+    .dot {
+        display: block;
+    }
+
+    .coma {
+        display: none;
+    }
+
+    .codeText .orangeText {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+    .codeText {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1133px) {
+    .giftImg {
+        width: 212px;
+        background: url('assets/giftDesktop.png'), var(--black-color) -0.226px -69px / 226.157% 583.333% no-repeat;
+    }
+
+    .closeButton {
+        display: flex;
+    }
+
+    .coma {
+        display: inline;
+    }
+
+    .desktopText {
+        display: inline;
+    }
+
+    .textWrapper {
+        max-width: 535px;
+    }
+}

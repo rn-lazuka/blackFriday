@@ -1,0 +1,137 @@
+.popupBanner {
+    width: 100%;
+    height: 350px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background: 69% 45% / 172% 118% no-repeat url('../../assets/gift.png'), var(--black-color);
+    box-shadow: 0 4px 34px 0 rgba(0, 0, 0, 0.45);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.appear {
+    opacity: 1
+}
+
+.header {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.closeButton {
+    height: 24px;
+    width: 24px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.textWrapper {
+    display: flex;
+    margin-bottom: 40px;
+
+    p {
+        font-family: Graphik LC, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: 0.08px;
+        color: var(--gray-color)
+    }
+
+    .orangeText {
+        margin-right: 4px;
+        margin-left: 4px;
+        color: var(--orange-color)
+    }
+}
+
+.whiteText {
+    color: #FFF;
+    text-align: center;
+    font-family: Graphik LC, sans-serif;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: -1.84px;
+    margin-bottom: 14px;
+}
+
+.gradientText {
+    color: rgba(210, 152, 26, 0.60);
+    text-align: center;
+    font-family: Graphik LC, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%; /* 44px */
+    letter-spacing: -1.6px;
+    background: -webkit-linear-gradient(0deg, #7D5317, #EDDF95);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 14px;
+}
+
+.btn {
+    display: inline-flex;
+    padding: 12px 24px;
+    align-items: flex-start;
+    border-radius: 14px;
+    opacity: 0.9;
+    background: rgba(255, 255, 255, 0.10);
+    color: #FFF;
+    text-align: center;
+    font-family: Graphik LC, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: 0.08px;
+    border: none;
+}
+
+.desktopText {
+    display: none;
+    margin-left: 4px;
+}
+
+@media screen and (min-width: 600px) {
+    .popupBanner {
+        background: 69% 45% / 130% 118% no-repeat url('../../assets/gift.png'), var(--black-color);
+    }
+}
+
+@media screen and (min-width: 744px) {
+    .popupBanner {
+        width: 600px;
+        border-radius: 16px;
+        background: 48% 42% / 100% 115% no-repeat url('../../assets/gift.png'), var(--black-color);
+        left: unset;
+        right: 16px;
+        bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .container {
+        width: 50%;
+    }
+
+    .desktopText {
+        display: inline;
+    }
+}
